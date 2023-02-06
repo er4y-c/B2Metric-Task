@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
+import PieChartIcon from '@mui/icons-material/PieChart'
+import PersonIcon from '@mui/icons-material/Person'
 
 const Sidebar = () => {
   return (
@@ -27,19 +29,38 @@ const Sidebar = () => {
                 textAlign:'center',
                 mt:'37px',
               }}>
-              <div style={{
-                width:'20px',
-                height:'20px',
-                backgroundColor:'blue',
-                borderRadius:'30px',
-                marginRight:'10px',
+              <div
+                className='logo-icon' 
+                style={{
+                  width:'32px',
+                  height:'32px',
+                  backgroundColor:'#3751FF',
+                  borderRadius:'30px',
+                  marginRight:'10px',
               }}></div>
               <Typography sx={{
                 color:'#A4A6B3',
                 fontWeight:'700',
+                fontSize:'19px',
               }}>B2Metric</Typography>
             </Box>
-            <Link to="/">Deneme</Link>
+            <Box 
+              className="sidebar-btn-group" 
+              sx={{
+                display:'flex',
+                flexDirection:'column',
+                mt:'30px',
+                width:'100%',
+              }}>
+              <Box className="sidebar-btn">
+                <PieChartIcon className='sidebar-icon'/>
+                <Link href="/" className='sidebar-link'>Overview</Link>
+              </Box>
+              <Box className="sidebar-btn">
+                <PersonIcon className='sidebar-icon'/>
+                <Link href="/Users" className='sidebar-link'>Users</Link>
+              </Box>
+            </Box>
     </Box>
   )
 }
