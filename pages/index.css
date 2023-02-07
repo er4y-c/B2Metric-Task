@@ -2,13 +2,14 @@
 *{
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 body{
     font-family: 'Mulish',sans-serif;
     margin-left: 255px;
     margin-top: 70px;
     background-color:#F7F8FC;
+    overflow-x: hidden;
 }
 .sidebar-btn{
     display:flex;
@@ -28,4 +29,8 @@ body{
 .sidebar-link {
     text-decoration:none;
     color:#A4A6B3;
+}
+.metric-card:hover, .metric-card p:hover {
+    color: #3751FF;
+    border-color: #3751FF;
 }

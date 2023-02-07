@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import UserImg from "../icons/546.jpg"
-
+import Image from 'next/image'
 const Navbar = ({category}) => {
   return (
     <Box 
@@ -10,16 +10,11 @@ const Navbar = ({category}) => {
             display:'flex',
             justifyContent:'space-between',
             alignItems:'center',
-            pt:'36px',
-            position:'fixed',
-            top:0,
-            right:0,
-            left:'255px',
         }}>
         <Typography variant='body1' sx={{fontSize:'24px',fontWeight:'700',color:'#252733',ml:'30px'}}>{category}</Typography>
-        <Box className="navbar-right" sx={{display:'flex'}}>
+        <Box className="navbar-right" sx={{display:'flex',alignItems:'center'}}>
             <Typography variant='body1' sx={{fontSize:'14px',fontWeight:'500'}}>Eray Aynacı</Typography>
-            <img src={UserImg} width='20px'/>
+            <Image src={UserImg} width={30} style={{borderRadius:'20px',marginLeft:'14px'}}/>
         </Box>
     </Box>
   )
