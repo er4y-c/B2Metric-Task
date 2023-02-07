@@ -2,11 +2,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+
 }
 body{
     font-family: 'Mulish',sans-serif;
+    margin-left: 255px;
+    margin-top: 70px;
+    background-color:#F7F8FC;
 }
 .sidebar-btn{
     display:flex;
@@ -15,7 +17,8 @@ body{
     padding-left: 32px;
 }
 .sidebar-btn:hover, .active {
-    opacity: 0.8;
+    color:#DDE2FF;
+    background: rgba(164, 166, 179, 0.08);
     border-left: 3px solid #DDE2FF;
 }
 .sidebar-icon{

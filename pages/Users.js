@@ -1,12 +1,13 @@
 import { Box } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 
 const Users = () => {
+  const [category, setCategory] = useState("Users")
   return (
     <Box>
-        <Sidebar/>
-        <div>Users</div>
+        <Sidebar category={category} setCategory={setCategory}/>
+        Users
     </Box>
   )
 }

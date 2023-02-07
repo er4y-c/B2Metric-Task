@@ -3,9 +3,11 @@ import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 import PieChartIcon from '@mui/icons-material/PieChart'
 import PersonIcon from '@mui/icons-material/Person'
+import Navbar from './Navbar'
 
-const Sidebar = () => {
+const Sidebar = ({ category, setCategory }) => {
   return (
+    <>
     <Box 
         className="sidebar-container"
         sx={{
@@ -15,6 +17,7 @@ const Sidebar = () => {
             position:'fixed',
             top:0,
             bottom:0,
+            left:0,
             color:'#DDE2FF',
             bgcolor:'#363740',
             width:'255px',
@@ -39,7 +42,7 @@ const Sidebar = () => {
                   marginRight:'10px',
               }}></div>
               <Typography sx={{
-                color:'#A4A6B3',
+                color:'rgba(164, 166, 179, 0.7)',
                 fontWeight:'700',
                 fontSize:'19px',
               }}>B2Metric</Typography>
@@ -52,16 +55,18 @@ const Sidebar = () => {
                 mt:'30px',
                 width:'100%',
               }}>
-              <Box className="sidebar-btn">
+              <Box className={category==="Overview"?"sidebar-btn active":"sidebar-btn"}>
                 <PieChartIcon className='sidebar-icon'/>
-                <Link href="/" className='sidebar-link'>Overview</Link>
+                <Link href="/" className='sidebar-link' onClick={()=>setCategory("Overview")}>Overview</Link>
               </Box>
-              <Box className="sidebar-btn">
+              <Box className={category==="Users"?"sidebar-btn active":"sidebar-btn"}>
                 <PersonIcon className='sidebar-icon'/>
-                <Link href="/Users" className='sidebar-link'>Users</Link>
+                <Link href="/Users" className='sidebar-link' onClick={()=>setCategory("Users")}>Users</Link>
               </Box>
             </Box>
     </Box>
+    <Navbar category={category}/>
+    </>
   )
 }
 
