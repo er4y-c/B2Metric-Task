@@ -43,7 +43,7 @@ body{
     font-size:14px;
     font-weight:bold;
 }
-.table-row:hover {
+.table-row:hover{
     cursor:'pointer';
     background-color: rgba(55, 81, 255, 0.04);
 }

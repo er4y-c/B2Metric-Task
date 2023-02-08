@@ -1,11 +1,9 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { string, object } from 'yup';
 import { Box, Button, TextField, IconButton, Typography, InputAdornment } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Link from 'next/link';
 
 const Login = () => {
   const {values, handleChange, handleSubmit, handleBlur, errors, isSubmitting, touched} = useFormik({

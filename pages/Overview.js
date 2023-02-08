@@ -1,5 +1,5 @@
-import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Box, Card, CardContent, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import { cardValues, chartOptions, data, chartCards } from "../utils/constants"
 import {
