@@ -73,13 +73,3 @@ export const data = {
       },
     ],
 };
-export const userData = [
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-    {detail:"Eray Aynacı",name:"Eray Aynacı",date:"07.02.2023",segment:"New"},
-  ]
