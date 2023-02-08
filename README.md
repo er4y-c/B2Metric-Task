@@ -4,7 +4,7 @@ Bu proje React kullanılarak NextJs yapısına uygun olarak geliştirilmiştir.
 ## Kullanılan Kütüphaneler
 
 | Kütüphane | Versiyon |
-| —— | —— | —— |
+| --------- | -------- |
 | React | 18.2.0 |
 | MaterialUI | ^5.11.7 |
 | MaterialUI Icons| ^5.11.0 |
