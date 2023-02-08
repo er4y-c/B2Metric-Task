@@ -9,7 +9,6 @@ const UserList = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
     fetch("https://jsonplaceholder.typicode.com/users").then(response=>response.json()).then(users=>dispatch(updateUserList(users)))
-    
   },[])
   const userData = useSelector(state=>state.users);
   return (
@@ -21,11 +20,11 @@ const UserList = () => {
         borderRadius:'8px',
       }}>
       <Typography
-          sx={{color: '#252733',fontWeight: '700',fontSize: '19px'}}
+          sx={{color: '#252733',fontWeight: '700',fontSize: '19px',m:'32px'}}
           variant="h6"
         >
           All Users
-        </Typography>
+       </Typography> 
         <TableContainer>
         <Table>
           <TableHead>
@@ -39,14 +38,14 @@ const UserList = () => {
           <TableBody>
             {
               userData.map((user)=>(
-                <TableRow key={user.id} className="table-row">
+                <TableRow key={user.id}>
                   <TableCell style={{display:'flex',alignItems:'center'}}>
-                    <Image src={UserImg} width={44} style={{borderRadius:'20px',ml:'21px'}}/>  
-                    <Typography>{user.name}</Typography>
+                    <Image src={UserImg} width={44} style={{borderRadius:'20px',ml:'21px'}} alt="User pic"/>  
+                    {user.name}
                   </TableCell>
-                  <TableCell><Typography>{user.company.name}</Typography></TableCell>
-                  <TableCell><Typography>{user.email}</Typography></TableCell>
-                  <TableCell><Typography>{user.phone}</Typography></TableCell>
+                  <TableCell>{user.company.name}</TableCell>
+                  <TableCell>{user.email}</TableCell>
+                  <TableCell>{user.phone}</TableCell>
                 </TableRow>
               )) 
             }

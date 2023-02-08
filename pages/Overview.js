@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import { cardValues, chartOptions, data } from "../utils/constants"
 import {
@@ -16,7 +16,9 @@ import { Line } from 'react-chartjs-2';
 
 const Overview = () => {
   const [category, setCategory] = useState("Overview")
-
+  useEffect(()=>{
+    console.log("Overview rendered");
+  },[])
   Chart.register(
     CategoryScale,
     LinearScale,
@@ -35,7 +37,7 @@ const Overview = () => {
         //flexDirection:{xs:'column',sm:'column', md:'row'},
         flexWrap:'wrap',
         justifyContent:'space-around',
-        margin:{xs:'auto',sm:'auto',md:'auto'}
+        m:'auto',
         }}>
           {
             cardValues.map((cards)=>(

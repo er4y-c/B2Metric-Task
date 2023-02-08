@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 import PieChartIcon from '@mui/icons-material/PieChart'
@@ -6,6 +6,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import Navbar from './Navbar'
 
 const Sidebar = ({ category, setCategory }) => {
+  
   return (
     <>
     <Box 

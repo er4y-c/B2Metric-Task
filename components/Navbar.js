@@ -1,8 +1,11 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import UserImg from "../icons/546.jpg"
 import Image from 'next/image'
 const Navbar = ({category}) => {
+  useEffect(()=>{
+    console.log("Navbar rendered");
+  },[])
   return (
     <Box 
         className="navbar-container"
