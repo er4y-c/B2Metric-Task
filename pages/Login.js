@@ -5,6 +5,7 @@ import { string, object } from 'yup';
 import { Box, Button, TextField, IconButton, Typography, InputAdornment } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Link from 'next/link';
 
 const Login = () => {
   const {values, handleChange, handleSubmit, handleBlur, errors, isSubmitting, touched} = useFormik({
@@ -38,7 +39,7 @@ const Login = () => {
             borderRadius:'8px'
         }}>
           <Box className="login-logo" 
-          sx={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',mb:'30px',textAlign:'center',mt:'40px'}}>
+            sx={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',mb:'30px',textAlign:'center',mt:'40px'}}>
           <div
                 className='logo-icon' 
                 style={{
@@ -87,7 +88,7 @@ const Login = () => {
             }}
           />
           {errors.Password && touched.Password ? <div>{errors.Password}</div>:null}
-          <Button variant='contained'  sx={{bgcolor:"#3751FF",width:'80%',height:'32px',m:'auto'}} type="submit">Log In</Button>
+          <Button variant='contained'  sx={{bgcolor:"#3751FF",width:'100%',height:'48px',m:'auto'}} type="submit">Log In</Button>
           <Typography sx={{color:'#9FA2B4',fontSize:'14px',fontWeight:'400',mt:'20px',mb:'40px',textAlign:'center'}}>Don't have an account ? <span style={{color:'blue',}}>Signup</span></Typography>
         </form>
         </Box>

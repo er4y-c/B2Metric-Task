@@ -38,7 +38,7 @@ const UserList = () => {
           <TableBody>
             {
               userData.map((user)=>(
-                <TableRow key={user.id}>
+                <TableRow key={user.id} className="table-row">
                   <TableCell style={{display:'flex',alignItems:'center'}}>
                     <Image src={UserImg} width={44} style={{borderRadius:'20px',ml:'21px'}} alt="User pic"/>  
                     {user.name}

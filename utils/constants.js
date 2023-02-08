@@ -73,3 +73,31 @@ export const data = {
       },
     ],
 };
+
+export const chartCards = [
+  {
+    id:'1',
+    title:'Active Sessions',
+    value:'449'
+},
+{
+    id:'2',
+    title:'Received',
+    value:'426'
+},
+{
+    id:'3',
+    title:'Average Session Time',
+    value:'33m'
+},
+{
+    id:'4',
+    title:'Bounce Rate',
+    value:'47%'
+},
+{
+  id:'5',
+  title:'Events per User',
+  value:'36.22'
+}
+]
