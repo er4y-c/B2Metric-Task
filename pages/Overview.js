@@ -16,9 +16,7 @@ import { Line } from 'react-chartjs-2';
 
 const Overview = () => {
   const [category, setCategory] = useState("Overview")
-  useEffect(()=>{
-    console.log("Overview rendered");
-  },[])
+
   Chart.register(
     CategoryScale,
     LinearScale,
